@@ -1,0 +1,11 @@
+.venv/
+dist/
+build/
+*.spec
+__pycache__/
+*.pyc
+*.png
+*.jpg
+*.jpeg
+!assets/logo.png
+!sample_signature.png
