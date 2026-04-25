@@ -84,3 +84,13 @@ Adjustable at the top of `stamp_signature.py`:
 ```
 
 The signed PDF is saved in the same folder as the original with `_SIGNED` appended.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+You are free to use, modify, and build features on top of this project, provided that the original copyright and permission notice are retained.
+
+Attribution: WIOX | SEPL - Salphan Energy Pvt Ltd.
