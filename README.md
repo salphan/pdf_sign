@@ -20,7 +20,7 @@ Automatically distinguishes **scanned PDFs** (image-only pages) from **normal te
 
 1. Run `build_standalone.bat` **once**.  
    It installs packages and creates `dist\stamp_signature.exe`.
-2. Place your PDF and signature PNG in any folder.
+2. Place your PDF and signature PNG in the parent direcetory folder.
 3. Double-click `stamp_signature_v02.bat` — it will auto-detect and use the `.exe`.
 
 ---
