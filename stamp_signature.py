@@ -107,7 +107,7 @@ def main() -> None:
     blank_check = is_blank_image if pdf_type == "scanned" else is_blank_text
     type_label  = "SCANNED (image-based pages)" if pdf_type == "scanned" \
                   else "NORMAL  (text-based pages)"
-    print(f"          → {type_label}")
+    print(f"          -> {type_label}")
     print()
 
     # ---- Step 2: stamp pages ----------------------------------------------

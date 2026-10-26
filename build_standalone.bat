@@ -13,6 +13,11 @@ set "PYTHON_ROOT=C:\Users\plyid\miniforge3"
 set "PYEXPAT_PYD=%PYTHON_ROOT%\DLLs\pyexpat.pyd"
 set "LIBEXPAT_DLL=%PYTHON_ROOT%\Library\bin\libexpat.dll"
 
+REM Conda keeps native DLLs (liblzma, libbz2, ffi, libcrypto, ...) in Library\bin.
+REM Put it first on PATH so PyInstaller bundles these instead of failing to find
+REM them or picking up mismatched copies from other programs (e.g. Tesseract).
+set "PATH=%PYTHON_ROOT%\Library\bin;%PATH%"
+
 if not exist "%PYTHON_EXE%" (
     echo [ERROR] Python not found at: %PYTHON_EXE%
     echo         Update PYTHON_EXE in this file to your actual python.exe path.
@@ -105,7 +110,7 @@ echo [4/4] Build complete!
 echo.
 echo   Standalone executable: %BAT_DIR%dist\stamp_signature.exe
 echo.
-echo   Run launcher.bat (or double-click it) to use the stamper.
+echo   Run stamp_signature_v02.bat (or double-click it) to use the stamper.
 echo   The launcher will automatically use the .exe instead of Python.
 echo.
 pause
